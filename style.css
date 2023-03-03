@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Manrope";
+  src: url("./assets/fonts/Manrope/Manrope-VariableFont_wght.ttf")
+    format("woff");
+  /* font-weight: 125 950; */
+}
+
+* {
+  font-family: "Manrope";
+}
+
+section,
+header,
+footer {
+  overflow-x: hidden;
+}
+
+@layer base {
+  :root {
+    --color-black: 30 27 27;
+    --color-primary: 255 100 51;
+    --color-secondary: 102 28 231;
+    --color-mint: 92 186 153;
+    --color-steelgrey: 226 230 233;
+    --color-lightgrey: 242 242 242;
+    --color-white: 255 255 255;
+  }
+
+  h1 {
+    @apply font-extrabold text-[4rem] leading-[5.25rem];
+  }
+
+  h2 {
+    @apply font-extrabold text-[3.625rem] leading-[4.75rem];
+  }
+
+  h3 {
+    @apply font-bold text-5xl leading-[4.2rem];
+  }
+
+  h4 {
+    @apply font-bold text-[2.5rem] leading-[3.5rem];
+  }
+
+  h5 {
+    @apply font-bold text-[2rem] leading-[3rem];
+  }
+
+  h6 {
+    @apply font-semibold text-xl leading-[1.875rem];
+  }
+
+  h5 {
+    @apply font-semibold text-xl leading-[1.875rem];
+  }
+
+  p {
+    @apply font-semibold text-lg leading-8;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary px-8 py-3 text-[rgb(var(--color-white))] font-semibold text-lg leading-[3rem] rounded-2xl;
+  }
+
+  .btn-secondary {
+    @apply bg-black px-10 py-3 text-[rgb(var(--color-white))] font-semibold text-lg leading-[3rem] rounded-2xl;
+  }
+
+  .nav-link {
+    @apply font-semibold leading-7;
+  }
+
+  .service-pill {
+    /* 109_108_115 */
+    /* 255_255_255 */
+    /* [box-shadow:0px_0px_0px_12px_rgb(255_255_255/_43%)] */
+    /* w-[281px] h-[102px] */
+    /*   */
+    /* border-[rgba(225,225,225,0.43)] */
+    @apply bg-white [box-shadow:0px_28px_118px_0px_rgb(109_108_115/_12%)] py-9 px-3 flex space-x-4 items-center rounded-full;
+  }
+
+  .offer-card {
+    @apply w-full md:w-[calc(50%_-_16px)] lg:w-[calc(25%_-_16px)] aspect-video grid place-items-center bg-white hover:bg-primary hover:text-white m-1;
+  }
+
+  .brand-logo {
+    @apply w-full md:w-1/2 lg:w-1/5;
+  }
+
+  .testimonial-slide {
+    @apply bg-white w-full flex-shrink-0 lg:w-[50%] p-16 border-[rgb(172,172,172,29%)] [box-shadow:11px_130px_100px_30px_rgba(0,_0,_0,_0.02)];
+  }
+
+  .collapse-toggle {
+    @apply w-[50px] h-[50px] absolute top-0 right-0 mt-10 mr-10 grid place-items-center text-white font-bold text-5xl bg-primary outline-0;
+  }
+
+  /* .collapse-toggle::after {
+    @apply content-['\02795'] w-[50px] h-[50px] absolute top-0 right-0 mt-10 mr-10 grid place-items-center text-white font-bold text-lg bg-primary;
+  } */
+
+  .collapse-item {
+    @apply bg-white p-10 mt-3 relative;
+  }
+
+  /* Stop animating the height property */
+  .collapse-item p {
+    @apply overflow-x-hidden [transition-property:max-height] max-h-0 origin-top;
+  }
+
+  .collapse-item.collapse-open p {
+    @apply max-h-full;
+  }
+
+  .slider {
+    @apply transition-transform;
+  }
+
+  .indicators {
+    /* @apply ; */
+  }
+
+  .indicator {
+    @apply w-8 h-1 border-gray-400 bg-gray-400 shrink-0;
+  }
+
+  .indicators .indicator.active {
+    @apply bg-primary;
+  }
+}
+
+@layer utilities {
+  .body1 {
+    @apply font-semibold text-lg leading-8;
+  }
+
+  .body2 {
+    @apply font-semibold leading-7 text-base;
+  }
+
+  .title {
+    @apply text-[2rem] leading-[3rem] font-semibold -tracking-[0.03em];
+  }
+
+  .title2 {
+    @apply text-2xl leading-9 font-semibold -tracking-[0.03em];
+  }
+
+  .caption {
+    @apply leading-6 font-medium;
+  }
+}
