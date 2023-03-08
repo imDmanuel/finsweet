@@ -19,10 +19,14 @@ function slider() {
   const slides = document.querySelectorAll(".testimonial-slide");
 
   const indicatorNodes = createIndicators(slides.length);
-  activateIndicator(indicatorNodes, null, currentSlide)
+  activateIndicator(indicatorNodes, null, currentSlide);
 
-  document.querySelector(".slider-next").addEventListener("click", throttle(nextSlide));
-  document.querySelector(".slider-prev").addEventListener("click", throttle(prevSlide));
+  document
+    .querySelector(".slider-next")
+    .addEventListener("click", throttle(nextSlide));
+  document
+    .querySelector(".slider-prev")
+    .addEventListener("click", throttle(prevSlide));
   const slider = document.querySelector(".slider");
 
   function nextSlide() {
@@ -49,9 +53,8 @@ function slider() {
     console.log("currentSlide", currentSlide);
     const displacement = slides[prevSlide].offsetWidth * currentSlide;
     slider.style.transform = `translateX(${displacement}px)`;
+    activateIndicator(indicatorNodes, prevSlide, currentSlide);
   }
-
-  activateIndicator(indicatorNodes, prevSlide, currentSlide);
 }
 
 function createIndicators(numberOfSlides) {
@@ -73,7 +76,9 @@ function activateIndicator(indicatorNodes, prevSlide, currentSlide) {
   const displacement = prevSlide < currentSlide ? 178 : -178;
 
   if (currentSlide % 4 === 0) {
-    indicatorNodes[currentSlide].parentNode.transform = `translate(${displacement}px)`;
+    indicatorNodes[
+      currentSlide
+    ].parentNode.transform = `translate(${displacement}px)`;
   }
 }
 
