@@ -11,8 +11,8 @@
       <div class="container flex">
         <img src="/logo.svg" alt="{Finsweet" />
 
-        <div class="divide-x-[1px] hidden md:flex ml-auto items-center">
-          <ul class="flex space-x-10 mr-8">
+        <div class="divide-x-[1px] hidden lg:flex ml-auto items-center">
+          <ul class="flex sm:space-x-2 lg:space-x-7 mr-8">
             <li><a class="body2" href="./index.html">Home</a></li>
             <li><a class="body2" href="./about.html">About&nbsp;us</a></li>
             <li><a class="body2" href="./services.html">Services</a></li>
@@ -20,13 +20,13 @@
             <li><a class="body2" href="./contact.html">Contact</a></li>
           </ul>
 
-          <div class="flex items-center space-x-3 pl-8">
+          <div class="flex items-center space-x-3 pl-3 lg:pl-6">
             <img
-              class="w-10 h-10"
+              class="mdw-9 h-9"
               src="./assets/images/call-assist.svg"
               alt="Phone"
             />
-            <a class="flex flex-col" href="tel:+18002652454">
+            <a class="flex flex-col md:text-sm" href="tel:+18002652454">
               <span>Road&nbsp;assistance</span>
               <p class="">1800&nbsp;265&nbsp;24&nbsp;54</p>
             </a>
@@ -35,9 +35,21 @@
       </div>
     </nav>
     <header class="">
-      <div class="container flex flex-col lg:flex-row pt-20 pb-40">
+      <div
+        class="
+          container
+          flex flex-col
+          space-x-0
+          lg:flex-row
+          lg:space-x-8 lg:space-y-0
+          pt-10
+          lg:pt-20
+          pb-20
+          lg:pb-40
+        "
+      >
         <div class="w-full lg:w-1/2">
-          <h1>Get your vehicle service done online at one place</h1>
+          <h2>Get your vehicle service done online at one place</h2>
           <button class="btn-primary mt-8">Book a service</button>
 
           <div class="flex space-x-3 mt-12">
@@ -49,22 +61,24 @@
           </div>
         </div>
 
-        <div class="w-full lg:w-1/2 max-w-[605px] max-h-[632px] relative">
+        <div class="w-full pt-4 lg:w-1/2 max-w-[605px] max-h-[632px] relative">
           <img
             class="w-full h-full object-cover"
             src="./assets/images/mechanic-working.png"
             alt="Mechanic Working"
           />
-          <div class="absolute top-20 -ml-8">
+          <div class="absolute top-20 ml-5 lg:-ml-8">
             <!-- White pill -->
             <div
               class="
                 bg-white
                 [box-shadow:0px_0px_0px_12px_rgb(255_255_255_/_43%)]
-                w-[281px]
-                h-[102px]
+                lg:w-[281px]
+                h-[70px]
+                lg:h-[102px]
                 py-9
-                px-3
+                px-2
+                lg:px-3
                 flex
                 space-x-4
                 items-center
@@ -75,13 +89,13 @@
               <div
                 class="
                   title2
-                  w-[70px]
-                  h-[70px]
+                  w-[50px]
+                  h-[50px]
                   bg-mint
                   rounded-full
                   grid
                   place-items-center
-                  gap-1
+                  space-x-1
                   text-white
                 "
               >
@@ -97,13 +111,14 @@
             class="
               absolute
               bottom-16
-              -right-10
+              right-5
+              lg:-right-10
               p-3
               rounded-full
               bg-[rgb(255,255,255,43%)]
             "
           >
-            <div class="service-pill px-14">
+            <div class="service-pill px-7 lg:px-14">
               <!-- Rating numbers -->
               <div>
                 <div class="title2">4.5/5</div>
@@ -119,7 +134,7 @@
     </header>
 
     <!-- Quote -->
-    <section class="bg-steelgrey pt-40 pb-40">
+    <section class="bg-steelgrey py-20 lg:py-40">
       <div class="container flex flex-col lg:flex-row lg:space-x-16">
         <div class="w-full lg:w-1/2">
           <h2 class="max-w-xl">We are taking car servicing seriously</h2>
@@ -198,19 +213,19 @@
             <div class="flex flex-col space-y-1">
               <input
                 type="text"
-                class="py-6 pl-10 w-full"
+                class="form-input"
                 name="location"
                 placeholder="Enter your location"
               />
               <input
                 type="text"
-                class="py-6 pl-10 w-full"
+                class="form-input"
                 name="location"
                 placeholder="Enter your location"
               />
               <input
                 type="text"
-                class="py-6 pl-10 w-full"
+                class="form-input"
                 name="location"
                 placeholder="Enter your location"
               />
@@ -223,7 +238,7 @@
     </section>
 
     <!-- Process section -->
-    <section class="py-32">
+    <section class="py-16 lg:py-32">
       <div class="container flex flex-col lg:flex-row">
         <!-- Process left -->
         <div class="w-full lg:w-1/2">
@@ -242,7 +257,7 @@
     </section>
 
     <!-- Offer -->
-    <section class="bg-lightgrey py-40">
+    <section class="bg-lightgrey py-16 lg:py-32">
       <div class="container">
         <div class="title2 text-center">What we offer</div>
         <h2 class="max-w-[858px] mx-auto text-center pt-2 pb-16">
@@ -360,7 +375,7 @@
 
     <!-- Call to action -->
     <section class="flex h-[500px]">
-      <div class="max-w-[14.8%]">
+      <div class="max-w-0 md:max-w-[14.8%]">
         <img
           class="w-full h-full object-cover"
           src="./assets/images/car-bg.png"
@@ -370,12 +385,17 @@
       <div
         class="
           bg-primary
-          max-w-[37.9%]
+          w-full
+          lg:max-w-[37.9%]
+          sm:min-w-[70%]
+          lg:min-w-[729px]
           text-white
-          pt-40
-          pb-60
-          px-20
-          min-w-[729px]
+          pt-20
+          lg:pt-40
+          pt-30
+          lg:pb-60
+          px-5
+          lg:px-20
           inline-block
         "
       >
@@ -386,7 +406,7 @@
         <button class="btn-secondary mt-12">Contact Us</button>
       </div>
       <!-- max-w-[calc(100_-_14.8_-_37.9)%] -->
-      <div class="">
+      <div class="w-0 md:w-auto">
         <img
           class="w-full h-full object-cover"
           src="./assets/images/car-inner-bg.png"
@@ -418,12 +438,12 @@
     </section>
 
     <!-- Brands -->
-    <section class="py-40">
+    <section class="py-16 lg:py-32">
       <div class="container">
         <h3 class="text-center">Brands we Serve</h3>
 
         <!-- Brand row -->
-        <div class="flex flex-wrap mt-40">
+        <div class="flex flex-wrap mt-16 lg:mt-40">
           <img
             class="brand-logo"
             src="./assets/images/brand-logo1.svg"
@@ -487,7 +507,10 @@
 
         <!-- Testimonial Sliders -->
         <div class="mt-24 overflow-x-hidden">
-          <div class="slider flex space-x-12">
+          <div
+            class="slider flex space-x-0 lg:space-x-3"
+            data-items-per-slide="9"
+          >
             <!-- Slide -->
             <div class="testimonial-slide">
               <!-- Person details -->
@@ -502,7 +525,7 @@
               </div>
 
               <!-- End person details -->
-              <div class="title2 max-w-md pt-6">
+              <div class="caption max-w-md pt-6">
                 I have got my car repaired at Finsweet many times before, they
                 are good at what they do. Not only did they repair my car in a
                 short comprehensive look on all the working
@@ -523,7 +546,7 @@
               </div>
 
               <!-- End person details -->
-              <div class="title2 max-w-md pt-6">
+              <div class="caption max-w-md pt-6">
                 I have got my car repaired at Finsweet many times before, they
                 are good at what they do. Not only did they repair my car in a
                 short comprehensive look on all the working
@@ -544,7 +567,7 @@
               </div>
 
               <!-- End person details -->
-              <div class="title2 max-w-md pt-6">
+              <div class="caption max-w-md pt-6">
                 I have got my car repaired at Finsweet many times before, they
                 are good at what they do. Not only did they repair my car in a
                 short comprehensive look on all the working
@@ -552,36 +575,26 @@
             </div>
           </div>
           <!-- Slider controls -->
-          <div
-            class="
-              mt-4
-              flex
-              space
-              justify-between
-              items-center
-              w-[calc(50%_+_80px)]
-              ml-auto
-            "
-          >
+          <div class="controls-container">
             <!-- Slider indicator -->
-            <div class="max-w-[178px] overflow-x-hidden">
-              <div class="indicators flex space-x-4 justify-center"></div>
+            <div class="max-w-[178px] -translate-x-[50%] overflow-x-hidden">
+              <div class="indicators"></div>
             </div>
 
             <!-- Slider prev/next controls -->
-            <div class="flex gap-6 mt-4">
+            <div class="flex items-center gap-6 mt-4">
               <button
                 class="
                   slider-prev
-                  w-[62px]
-                  h-[62px]
+                  w-[40px]
+                  h-[40px]
                   font-bold
                   bg-white
                   rounded-full
-                  text-4xl
-                  flex
-                  justify-center
-                  items-center
+                  text-xl
+                  grid
+                  place-items-center
+                  outline-none
                 "
               >
                 &longleftarrow;
@@ -589,16 +602,16 @@
               <button
                 class="
                   slider-next
-                  w-[76px]
-                  h-[76px]
+                  w-[50px]
+                  h-[50px]
                   font-bold
                   bg-black
                   text-white
                   rounded-full
-                  text-4xl
-                  flex
-                  justify-center
-                  items-center
+                  text-2xl
+                  grid
+                  place-items-center
+                  outline-none
                 "
               >
                 &longrightarrow;
@@ -610,71 +623,90 @@
     </section>
 
     <!-- FAQ's -->
-    <section class="bg-steelgrey py-32">
+    <section class="bg-steelgrey py-16 lg:py-32">
       <div class="container">
         <h3 class="text-center">Frequently Asked Questions</h3>
 
-        <div class="pt-24 max-w-4xl mx-auto">
+        <div class="pt-10 lg:pt-24 max-w-4xl mx-auto">
           <div class="collapse-item collapse-open">
-            <div class="title2">How long should a car repair take?</div>
-            <p class="max-w-[700px]">
+            <div class="title2 collapse-title">
+              How long should a car repair take?
+            </div>
+            <p class="max-w-[700px] collapse-content">
               I have got my car repaired at Finsweet many times before, they are
               good at what they do. Not only did they repair my car I have got
               my car repaired at Finsweet I have got my car repaired at Finsweet
             </p>
-            <button class="collapse-toggle">&minus;</button>
+            <!-- <button class="collapse-toggle">&minus;</button> -->
           </div>
 
           <div class="collapse-item">
-            <div class="title2">How do I schedule my car's appointment ?</div>
-            <p class="max-w-[700px]">
+            <div class="title2 collapse-title">
+              How do I schedule my car's appointment ?
+            </div>
+            <p class="max-w-[700px] collapse-content">
               I have got my car repaired at Finsweet many times before, they are
               good at what they do. Not only did they repair my car I have got
               my car repaired at Finsweet I have got my car repaired at Finsweet
             </p>
 
-            <button class="collapse-toggle">&plus;</button>
+            <!-- <button class="collapse-toggle">&plus;</button> -->
           </div>
 
           <div class="collapse-item">
-            <div class="title2">What are the repair services provided?</div>
-            <p class="max-w-[700px]">
+            <div class="title2 collapse-title">
+              What are the repair services provided?
+            </div>
+            <p class="max-w-[700px] collapse-content">
               I have got my car repaired at Finsweet many times before, they are
               good at what they do. Not only did they repair my car I have got
               my car repaired at Finsweet I have got my car repaired at Finsweet
             </p>
 
-            <button class="collapse-toggle">&plus;</button>
+            <!-- <button class="collapse-toggle">&plus;</button> -->
           </div>
 
           <div class="collapse-item">
-            <div class="title2">Genuine spare parts during car repair?</div>
-            <p class="max-w-[700px]">
+            <div class="title2 collapse-title">
+              Genuine spare parts during car repair?
+            </div>
+            <p class="max-w-[700px] collapse-content">
               I have got my car repaired at Finsweet many times before, they are
               good at what they do. Not only did they repair my car I have got
               my car repaired at Finsweet I have got my car repaired at Finsweet
             </p>
 
-            <button class="collapse-toggle">&plus;</button>
+            <!-- <button class="collapse-toggle">&plus;</button> -->
           </div>
 
           <div class="collapse-item">
-            <div class="title2">How do I find auto body shops near me?</div>
-            <p class="max-w-[700px]">
+            <div class="title2 collapse-title">
+              How do I find auto body shops near me?
+            </div>
+            <p class="max-w-[700px] collapse-content">
               I have got my car repaired at Finsweet many times before, they are
               good at what they do. Not only did they repair my car I have got
               my car repaired at Finsweet I have got my car repaired at Finsweet
             </p>
 
-            <button class="collapse-toggle">&plus;</button>
+            <!-- <button class="collapse-toggle">&plus;</button> -->
           </div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <section class="bg-black py-40">
-      <div class="container flex justify-between">
+    <section class="bg-black py-16 lg:py-32">
+      <div
+        class="
+          container
+          flex flex-col
+          space-y-6
+          md:flex-row
+          md:space-x-10
+          justify-between
+        "
+      >
         <div>
           <h3 class="text-white max-w-md">
             Get in touch with us for your service
@@ -705,14 +737,23 @@
     </section>
 
     <!-- Bottom nav -->
-    <section class="bg-black py-16">
-      <div class="container flex justify-between">
+    <section class="bg-black py-8 lg:py-32">
+      <div
+        class="
+          container
+          flex flex-row flex-wrap
+          space-y-3
+          lg:space-y-0
+          justify-between
+          items-center
+        "
+      >
         <div>
           <img src="./assets/images/logo-white.png" alt="Logo white" />
         </div>
 
         <nav>
-          <ul class="flex space-x-9">
+          <ul class="flex space-x-2 lg:space-x-5">
             <li><a class="nav-link text-white" href="index.html">Home</a></li>
             <li>
               <a class="nav-link text-white" href="about.html">About us</a>
@@ -727,7 +768,7 @@
           </ul>
         </nav>
 
-        <div class="body2 text-gray-400">@ Copyright Finsweet 2021</div>
+        <div class="text-xs text-gray-400">@ Copyright Finsweet 2021</div>
       </div>
     </section>
     <script type="module" src="/main.js"></script>

@@ -1,16 +1,18 @@
 import "./style.css";
 
+// Sticking navbar
+window.addEventListener("scroll", stickNavbar);
+
 document
-  .querySelectorAll(".collapse-toggle")
-  .forEach((item) => item.addEventListener("click", toggleCollapse));
+  .querySelectorAll(".collapse-title")
+  .forEach((item) => item.addEventListener("click", throttle(toggleCollapse)));
 
 function toggleCollapse() {
-  console.log(this.innerHtml);
   // If collapse-open is previously absent and now present the toggle property returns true
   if (this.parentNode.classList.toggle("collapse-open")) {
-    this.textContent = "-";
+    // this.textContent = "-";
   } else {
-    this.textContent = "+";
+    // this.textContent = "+";
   }
 }
 
@@ -28,6 +30,10 @@ function slider() {
     .querySelector(".slider-prev")
     .addEventListener("click", throttle(prevSlide));
   const slider = document.querySelector(".slider");
+  // let itemsPerSlide = setPrope;
+  // debugger;
+
+  window.addEventListener("resize", throttle(onSliderResize, 500));
 
   function nextSlide() {
     const prevSlide = currentSlide;
@@ -55,6 +61,8 @@ function slider() {
     slider.style.transform = `translateX(${displacement}px)`;
     activateIndicator(indicatorNodes, prevSlide, currentSlide);
   }
+
+  function onSliderResize(e) {}
 }
 
 function createIndicators(numberOfSlides) {
@@ -95,3 +103,17 @@ function throttle(callback, delay = 200) {
 }
 
 slider();
+
+function stickNavbar(e) {
+  let pageYOffset = window.scrollY;
+  const stickOffset = 5;
+  let navbar = document.querySelector("nav");
+
+  if (pageYOffset > navbar.offsetHeight + stickOffset) {
+    navbar.classList.add("menu-sticky");
+  }
+  if (pageYOffset < navbar.offsetHeight - stickOffset) {
+    navbar.classList.remove("menu-sticky");
+  }
+  // debugger;
+}

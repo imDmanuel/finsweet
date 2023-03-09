@@ -28,6 +28,9 @@ footer {
     --color-steelgrey: 226 230 233;
     --color-lightgrey: 242 242 242;
     --color-white: 255 255 255;
+
+    /* --number-of-indicators: 3; */
+    --items-per-slide: 2;
   }
 
   h1 {
@@ -35,45 +38,45 @@ footer {
   }
 
   h2 {
-    @apply font-extrabold text-[3.625rem] leading-[4.75rem];
+    @apply font-extrabold text-5xl lg:text-[3.625rem] leading-[4rem] lg:leading-[4.75rem];
   }
 
   h3 {
-    @apply font-bold text-5xl leading-[4.2rem];
+    @apply font-bold text-5xl leading-[3.7rem] lg:leading-[4.2rem];
   }
 
   h4 {
-    @apply font-bold text-[2.5rem] leading-[3.5rem];
+    @apply font-bold text-[2.5rem] leading-[3.2rem] lg:leading-[3.5rem];
   }
 
   h5 {
-    @apply font-bold text-[2rem] leading-[3rem];
+    @apply font-bold text-[2rem] lg:leading-[3rem];
   }
 
   h6 {
-    @apply font-semibold text-xl leading-[1.875rem];
+    @apply font-semibold text-lg lg:text-xl lg:leading-[1.875rem];
   }
 
   h5 {
-    @apply font-semibold text-xl leading-[1.875rem];
+    @apply font-semibold text-lg lg:text-xl lg:leading-[1.875rem];
   }
 
   p {
-    @apply font-semibold text-lg leading-8;
+    @apply text-sm lg:text-lg lg:leading-8;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-primary px-8 py-3 text-[rgb(var(--color-white))] font-semibold text-lg leading-[3rem] rounded-2xl;
+    @apply bg-primary px-4 lg:px-8 py-3 lg:py-3 text-[rgb(var(--color-white))] font-semibold text-lg lg:leading-[3rem] rounded-lg lg:rounded-2xl;
   }
 
   .btn-secondary {
-    @apply bg-black px-10 py-3 text-[rgb(var(--color-white))] font-semibold text-lg leading-[3rem] rounded-2xl;
+    @apply bg-black px-4 lg:px-8 py-3 lg:py-3 text-[rgb(var(--color-white))] font-semibold text-lg lg:leading-[3rem] rounded-lg lg:rounded-2xl;
   }
 
   .nav-link {
-    @apply font-semibold leading-7;
+    @apply font-semibold text-sm lg:text-base;
   }
 
   .service-pill {
@@ -83,11 +86,11 @@ footer {
     /* w-[281px] h-[102px] */
     /*   */
     /* border-[rgba(225,225,225,0.43)] */
-    @apply bg-white [box-shadow:0px_28px_118px_0px_rgb(109_108_115/_12%)] py-9 px-3 flex space-x-4 items-center rounded-full;
+    @apply bg-white [box-shadow:0px_28px_118px_0px_rgb(109_108_115/_12%)] py-5 lg:py-9 px-3 flex space-x-4 items-center rounded-full;
   }
 
   .offer-card {
-    @apply w-full md:w-[calc(50%_-_16px)] lg:w-[calc(25%_-_16px)] aspect-video grid place-items-center bg-white hover:bg-primary hover:text-white m-1;
+    @apply w-full py-5 md:w-[calc(50%_-_16px)] lg:w-[calc(25%_-_16px)] text-center aspect-video grid place-items-center bg-white hover:bg-primary hover:text-white m-1;
   }
 
   .brand-logo {
@@ -95,7 +98,7 @@ footer {
   }
 
   .testimonial-slide {
-    @apply bg-white w-full flex-shrink-0 lg:w-[50%] p-16 border-[rgb(172,172,172,29%)] [box-shadow:11px_130px_100px_30px_rgba(0,_0,_0,_0.02)];
+    @apply bg-white w-full flex-shrink-0 lg:w-[50%] p-4 lg:p-16 border-[rgb(172,172,172,29%)] [box-shadow:11px_130px_100px_30px_rgba(0,_0,_0,_0.02)];
   }
 
   .collapse-toggle {
@@ -107,50 +110,71 @@ footer {
   } */
 
   .collapse-item {
-    @apply bg-white p-10 mt-3 relative;
+    @apply bg-white p-5 lg:p-10 mt-3 relative;
+  }
+
+  .collapse-title {
+    @apply pr-7;
+  }
+
+  .collapse-title {
+    @apply after:w-6 after:h-6 after:bg-primary after:absolute after:top-5 after:right-5 select-none cursor-pointer;
   }
 
   /* Stop animating the height property */
-  .collapse-item p {
-    @apply overflow-x-hidden [transition-property:max-height] max-h-0 origin-top;
+  .collapse-item .collapse-content {
+    @apply overflow-x-hidden h-0 origin-top transition-all;
   }
 
-  .collapse-item.collapse-open p {
-    @apply max-h-full;
+  .collapse-item.collapse-open .collapse-content {
+    @apply h-full;
   }
 
   .slider {
     @apply transition-transform;
   }
 
+  .controls-container {
+    /* lg:w-[calc(50%_+_12px)] */
+    @apply mt-4 flex justify-between items-center w-1/2 ml-auto;
+  }
+
   .indicators {
-    /* @apply ; */
+    @apply space-x-1 md:space-x-2 flex lg:space-x-4 justify-center;
   }
 
   .indicator {
-    @apply w-8 h-1 border-gray-400 bg-gray-400 shrink-0;
+    @apply w-2 sm:w-3 md:w-4 lg:w-6 h-1 border-gray-400 bg-gray-400 shrink-0;
   }
 
   .indicators .indicator.active {
     @apply bg-primary;
   }
+
+  .form-input {
+    @apply py-3 lg:py-6 pl-5 lg:pl-10 w-full outline-none;
+  }
+
+  .menu-sticky {
+    @apply fixed top-0 w-full md:pb-8 pb-4 md:pt-8 transition z-[100] bg-white shadow-lg;
+  }
 }
 
 @layer utilities {
   .body1 {
-    @apply font-semibold text-lg leading-8;
+    @apply text-lg leading-8;
   }
 
   .body2 {
-    @apply font-semibold leading-7 text-base;
+    @apply leading-7 text-base;
   }
 
   .title {
-    @apply text-[2rem] leading-[3rem] font-semibold -tracking-[0.03em];
+    @apply text-[1.5rem] lg:text-[2rem] leading-[3rem] font-semibold -tracking-[0.03em];
   }
 
   .title2 {
-    @apply text-2xl leading-9 font-semibold -tracking-[0.03em];
+    @apply text-lg lg:text-2xl lg:leading-9 font-semibold -tracking-[0.03em];
   }
 
   .caption {
