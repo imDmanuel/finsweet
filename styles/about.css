@@ -1,0 +1,24 @@
+.secondary-bg {
+  background: black;
+  background: linear-gradient(
+    rgba(255, 0, 0, 0.121),
+    rgba(0, 128, 0, 0.37),
+    url("./assets/images/car-inner-bg.png")
+  );
+}
+
+.team-member {
+  @apply relative overflow-hidden;
+}
+
+.name-plate {
+  @apply translate-y-[100%] transition-transform absolute w-full bottom-0 bg-black text-white text-center py-5;
+}
+
+.name-plate p.body2 {
+  @apply opacity-70;
+}
+
+.team-member:hover .name-plate {
+  @apply translate-y-[0%];
+}

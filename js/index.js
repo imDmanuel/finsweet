@@ -1,8 +1,3 @@
-import "./style.css";
-
-// Sticking navbar
-window.addEventListener("scroll", stickNavbar);
-
 document
   .querySelectorAll(".collapse-title")
   .forEach((item) => item.addEventListener("click", throttle(toggleCollapse)));
@@ -90,30 +85,4 @@ function activateIndicator(indicatorNodes, prevSlide, currentSlide) {
   }
 }
 
-function throttle(callback, delay = 200) {
-  let timer = null;
-  return function (...args) {
-    if (!timer) {
-      timer = setTimeout(() => {
-        callback.apply(this, args);
-        timer = false;
-      }, delay);
-    }
-  };
-}
-
 slider();
-
-function stickNavbar(e) {
-  let pageYOffset = window.scrollY;
-  const stickOffset = 5;
-  let navbar = document.querySelector("nav");
-
-  if (pageYOffset > navbar.offsetHeight + stickOffset) {
-    navbar.classList.add("menu-sticky");
-  }
-  if (pageYOffset < navbar.offsetHeight - stickOffset) {
-    navbar.classList.remove("menu-sticky");
-  }
-  // debugger;
-}

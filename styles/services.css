@@ -1,0 +1,4 @@
+.offer-card {
+  @apply w-auto m-0;
+  /* w-full py-5 md:w-[calc(50%_-_16px)] lg:w-[calc(25%_-_16px)] text-center aspect-video grid place-items-center bg-white hover:bg-primary hover:text-white m-1; */
+}
