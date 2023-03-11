@@ -17,6 +17,9 @@ section,
 header,
 footer {
   overflow-x: hidden;
+}
+
+footer {
   background-color: rgba(var(--color-black) / 0.95);
   @apply py-16 lg:py-32;
 }
