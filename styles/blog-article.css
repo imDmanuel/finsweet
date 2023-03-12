@@ -1,0 +1,11 @@
+.blog-details {
+  @apply py-10 max-w-3xl mx-auto;
+}
+
+.blog-content {
+  @apply max-w-3xl mx-auto;
+}
+
+.blog-quote {
+  @apply border-l-4 border-black pl-7 my-6 py-3;
+}

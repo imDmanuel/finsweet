@@ -73,11 +73,11 @@ footer {
 
 @layer components {
   .btn-primary {
-    @apply bg-primary hover:opacity-90 px-4 lg:px-8 py-3 lg:py-3 text-[rgb(var(--color-white))] font-semibold text-lg lg:leading-[2rem] rounded-lg lg:rounded-2xl;
+    @apply bg-primary hover:opacity-90 px-4 lg:px-8 py-3 lg:py-3 text-[rgb(var(--color-white))] font-semibold text-lg rounded-lg lg:rounded-2xl;
   }
 
   .btn-secondary {
-    @apply bg-black px-4 lg:px-8 py-3 lg:py-3 text-[rgb(var(--color-white))] font-semibold text-lg rounded-lg lg:rounded-2xl;
+    @apply bg-black hover:opacity-90 px-4 lg:px-8 py-3 lg:py-3 text-[rgb(var(--color-white))] font-semibold text-lg rounded-lg lg:rounded-2xl;
   }
 
   .nav-link {
@@ -187,11 +187,11 @@ footer {
   }
 
   .title {
-    @apply text-[1.2rem] lg:text-[2rem] leading-[3rem] -tracking-[0.03em];
+    @apply text-[1.2rem] font-semibold lg:text-[1.3rem] leading-[2rem] -tracking-[0.03em];
   }
 
   .title2 {
-    @apply text-lg lg:text-xl lg:leading-9 -tracking-[0.03em];
+    @apply text-lg font-semibold lg:text-xl lg:leading-9 -tracking-[0.03em];
   }
 
   .caption {
