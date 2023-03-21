@@ -1,3 +1,4 @@
+import { throttle } from "./utilities";
 document
   .querySelectorAll(".collapse-title")
   .forEach((item) => item.addEventListener("click", throttle(toggleCollapse)));
@@ -5,9 +6,11 @@ document
 function toggleCollapse() {
   // If collapse-open is previously absent and now present the toggle property returns true
   if (this.parentNode.classList.toggle("collapse-open")) {
-    // this.textContent = "-";
+    // const icon = window.getComputedStyle(this, ":after");
+    // console.log(icon);
+    // icon.textContent = "-";
   } else {
-    // this.textContent = "+";
+    // icon.textContent = "+";
   }
 }
 

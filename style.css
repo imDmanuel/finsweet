@@ -91,7 +91,7 @@ footer {
     /* w-[281px] h-[102px] */
     /*   */
     /* border-[rgba(225,225,225,0.43)] */
-    @apply bg-white [box-shadow:0px_28px_118px_0px_rgb(109_108_115/_12%)] py-5 lg:py-9 px-3 flex space-x-4 items-center rounded-full;
+    @apply bg-white [box-shadow:0px_28px_118px_0px_rgb(109_108_115/_12%)] py-5 lg:py-7 px-3 flex space-x-4 items-center rounded-full;
   }
 
   .offer-card {
@@ -115,20 +115,24 @@ footer {
   } */
 
   .collapse-item {
-    @apply bg-white p-5 lg:p-10 mt-3 relative;
+    @apply bg-white p-5 mt-3 relative;
   }
 
   .collapse-title {
-    @apply pr-7;
+    @apply pr-7 relative;
   }
 
   .collapse-title {
-    @apply after:w-6 after:h-6 after:bg-primary after:absolute after:top-5 after:right-5 select-none cursor-pointer;
+    @apply after:content-['+'] after:w-7 after:h-7 after:text-white leading-4 after:grid after:place-items-center after:aspect-square after:bg-primary after:absolute after:-translate-y-1/2 after:top-2/4 after:right-0 select-none cursor-pointer;
   }
 
   /* Stop animating the height property */
   .collapse-item .collapse-content {
-    @apply overflow-x-hidden h-0 origin-top transition-all;
+    @apply overflow-hidden h-0 origin-top transition-all;
+  }
+
+  .collapse-item.collapse-open .collapse-title {
+    @apply after:content-['-'];
   }
 
   .collapse-item.collapse-open .collapse-content {
@@ -168,12 +172,26 @@ footer {
     @apply flex items-center ml-16 mt-8 space-x-5;
   }
 
+  .timeline {
+    --timeline-dot-height: 40px;
+    --timeline-line-gap: 5px;
+    --timeline-line-top: calc(
+      var(--timeline-dot-height) + var(--timeline-line-gap)
+    );
+    @apply grid grid-cols-[40px_1fr] gap-x-3;
+  }
+
+  .timeline > div {
+    @apply my-5;
+  }
+
   .timeline-dot {
-    @apply w-10 h-10 bg-secondary grid place-items-center text-white rounded-full absolute top-1;
+    @apply w-10 h-10 bg-secondary grid place-items-center text-white rounded-full absolute top-0;
   }
 
   .timeline-line {
-    @apply top-[10px] absolute left-1/2 -translate-x-1/2 w-0 h-[calc(100%)] place-self-center border-dotted border-l-[3px] border-primary -z-10;
+    @apply top-[var(--timeline-line-top)] absolute left-1/2 -translate-x-1/2 w-0 h-[calc(100%_-_var(--timeline-line-top)_-_var(--timeline-line-gap))] place-self-center border-dotted border-l-[3px] border-primary -z-10;
+    /* @apply top-5 translate-y-1/2 absolute left-1/2 -translate-x-1/2 w-0 h-[calc(100%_-_52px)] place-self-center border-dotted border-l-[3px] border-primary -z-10; */
   }
 }
 

@@ -1,4 +1,4 @@
-function throttle(callback, delay = 200) {
+export function throttle(callback, delay = 200) {
   let timer = null;
   return function (...args) {
     if (!timer) {
