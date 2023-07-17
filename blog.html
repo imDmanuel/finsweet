@@ -10,30 +10,42 @@
   </head>
   <body>
     <nav class="py-8">
-      <div class="container flex">
-        <img src="/logo.svg" alt="{Finsweet" />
+      <div class="container flex items-center group">
+        <a href="/index.html">
+          <img src="/logo.svg" alt="{Finsweet" />
+        </a>
 
-        <div class="divide-x-[1px] hidden lg:flex ml-auto items-center">
-          <ul class="flex sm:space-x-2 lg:space-x-7 mr-8">
-            <li><a class="body2" href="./index.html">Home</a></li>
-            <li><a class="body2" href="./about.html">About&nbsp;us</a></li>
-            <li><a class="body2" href="./services.html">Services</a></li>
-            <li><a class="body2" href="./blog.html">Blog</a></li>
-            <li><a class="body2" href="./contact.html">Contact</a></li>
-          </ul>
+        <div class="ml-auto">
+          <input type="checkbox" class="peer hidden" id="menu-checkbox" />
+          <label class="lg:hidden menu-icon relative max-lg:z-20" for="menu-checkbox"></label>
+          <div
+            class="max-lg:hidden max-lg:peer-checked:block divide-x-[1px] lg:flex ml-auto items-center max-lg:bg-primary max-lg:fixed max-lg:inset-0 max-lg:z-10"
+          >
+            <ul
+              class="flex lg:space-x-7 mr-8 max-lg:flex-col max-lg:h-full max-lg:w-full max-lg:items-center max-lg:justify-center max-lg:text-white"
+            >
+              <li><a class="body2" href="./index.html">Home</a></li>
+              <li><a class="body2" href="./about.html">About&nbsp;us</a></li>
+              <li><a class="body2" href="./services.html">Services</a></li>
+              <li><a class="body2" href="./blog.html">Blog</a></li>
+              <li><a class="body2" href="./contact.html">Contact</a></li>
+              <li><a class="body2" href="./blog-article.html">Blog article</a></li>
+              <li><a class="body2" href="./service-detail.html">Service detail</a></li>
+            </ul>
 
-          <div class="flex items-center space-x-3 pl-3 lg:pl-6">
-            <img
-              class="mdw-9 h-9"
-              src="./assets/images/call-assist.svg"
-              alt="Phone"
-            />
-            <a class="flex flex-col md:text-sm" href="tel:+18002652454">
-              <span>Road&nbsp;assistance</span>
-              <p class="">1800&nbsp;265&nbsp;24&nbsp;54</p>
-            </a>
+            <div class="flex items-center space-x-3 pl-3 lg:pl-6 max-lg:hidden">
+              <img
+                class="mdw-9 h-9"
+                src="./assets/images/call-assist.svg"
+                alt="Phone"
+              />
+              <a class="flex flex-col md:text-sm" href="tel:+18002652454">
+                <span>Road&nbsp;assistance</span>
+                <p class="">1800&nbsp;265&nbsp;24&nbsp;54</p>
+              </a>
+            </div>
           </div>
-        </div>
+        </di>
       </div>
     </nav>
 

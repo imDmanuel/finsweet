@@ -73,11 +73,29 @@ footer {
 
 @layer components {
   .btn-primary {
-    @apply bg-primary hover:opacity-90 px-4 lg:px-8 py-3 lg:py-3 text-[rgb(var(--color-white))] font-semibold text-lg rounded-lg lg:rounded-2xl;
+    @apply bg-primary hover:opacity-90 px-4 lg:px-8 py-3 lg:py-3 text-[rgb(var(--color-white))] font-semibold text-lg rounded-lg;
   }
 
   .btn-secondary {
     @apply bg-black hover:opacity-90 px-4 lg:px-8 py-3 lg:py-3 text-[rgb(var(--color-white))] font-semibold text-lg rounded-lg lg:rounded-2xl;
+  }
+
+  .menu-icon,
+  .menu-icon::after,
+  .menu-icon::before {
+    @apply cursor-pointer block w-8 h-1 bg-black peer-checked:bg-white rounded z-10 transition-all duration-500;
+  }
+
+  .menu-icon::before {
+    @apply content-[""] translate-y-2 peer-checked:rotate-45 peer-checked:translate-x-12 peer-checked:translate-y-[2px];
+  }
+
+  .menu-icon::after {
+    @apply content-[""] -translate-y-3 peer-checked:-rotate-45 peer-checked:translate-x-12 peer-checked:-translate-y-[2px];
+  }
+
+  .menu-icon {
+    @apply peer-checked:-translate-x-12 peer-checked:bg-transparent;
   }
 
   .nav-link {
@@ -96,6 +114,10 @@ footer {
 
   .offer-card {
     @apply w-full py-5 md:w-[calc(50%_-_16px)] lg:w-[calc(25%_-_16px)] text-center aspect-video grid place-items-center bg-white hover:bg-primary hover:text-white m-1;
+  }
+
+  .offer-card:hover svg path {
+    fill: white;
   }
 
   .brand-logo {
@@ -161,7 +183,7 @@ footer {
   }
 
   .form-input {
-    @apply py-3 lg:py-6 pl-5 lg:pl-10 w-full outline-none;
+    @apply py-3 pl-4 w-full outline-none;
   }
 
   .menu-sticky {

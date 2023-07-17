@@ -5,10 +5,15 @@ module.exports = {
     container: {
       center: true,
       padding: {
+        // DEFAULT: "1rem",
+        // sm: "5rem",
+        // md: "5rem",
+        // lg: "8rem",
         DEFAULT: "1rem",
-        sm: "5rem",
-        md: "5rem",
-        lg: "8rem",
+        sm: "2rem",
+        lg: "4rem",
+        xl: "5rem",
+        "2xl": "6rem",
       },
     },
     extend: {
