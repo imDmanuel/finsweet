@@ -292,7 +292,7 @@ footer {
   /* END CONTACT */
 
   /* SERVICE DETAIL */
-  .offer-card {
+  .service-detail-offer-card {
     @apply w-full md:w-full lg:w-full m-0 my-1.5;
   }
   /* END SERVICE DETAIL */
