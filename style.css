@@ -191,7 +191,11 @@ footer {
   }
 
   .arrow-link {
-    @apply flex items-center ml-16 mt-8 space-x-5;
+    @apply flex items-center ml-16 mt-8 space-x-3;
+  }
+
+  .arrow-link > img {
+    @apply w-8;
   }
 
   .timeline {
@@ -293,13 +297,13 @@ footer {
 
   /* SERVICE DETAIL */
   .service-detail-offer-card {
-    @apply w-full md:w-full lg:w-full m-0 my-1.5;
+    @apply w-full md:w-full lg:w-full m-0 my-1.5 text-center aspect-video grid place-items-center bg-white hover:bg-primary hover:text-white m-1;
   }
   /* END SERVICE DETAIL */
 
   /* SERVICES */
   .service-offer-card {
-    @apply w-auto m-0;
+    @apply w-auto m-0 text-center aspect-video grid place-items-center bg-white hover:bg-primary hover:text-white m-1;
     /* w-full py-5 md:w-[calc(50%_-_16px)] lg:w-[calc(25%_-_16px)] text-center aspect-video grid place-items-center bg-white hover:bg-primary hover:text-white m-1; */
   }
 
