@@ -237,4 +237,71 @@ footer {
   .caption {
     @apply leading-6 font-medium;
   }
+
+  .secondary-bg {
+    background: black;
+    background: linear-gradient(
+      rgba(255, 0, 0, 0.121),
+      rgba(0, 128, 0, 0.37),
+      url("./assets/images/car-inner-bg.png")
+    );
+  }
+  /* ABOUT */
+  .team-member {
+    @apply relative overflow-hidden;
+  }
+
+  .name-plate {
+    @apply translate-y-[100%] transition-transform absolute w-full bottom-0 bg-black text-white text-center py-5;
+  }
+
+  .name-plate p.body2 {
+    @apply opacity-70;
+  }
+
+  .team-member:hover .name-plate {
+    @apply translate-y-[0%];
+  }
+  /* END ABOUT */
+
+  /* BLOG ARTICLE */
+  .blog-details {
+    @apply py-10 max-w-3xl mx-auto;
+  }
+
+  .blog-content {
+    @apply max-w-3xl mx-auto;
+  }
+
+  .blog-quote {
+    @apply border-l-4 border-black pl-7 my-6 py-3;
+  }
+
+  /* END BLOG ARTICLE */
+
+  /* BLOGS */
+  .post-date {
+    @apply body2 text-gray-400 opacity-80;
+  }
+  /* END BLOGS */
+
+  /* CONTACT */
+  .contact-form-input {
+    @apply form-input bg-lightgrey mt-1;
+  }
+  /* END CONTACT */
+
+  /* SERVICE DETAIL */
+  .offer-card {
+    @apply w-full md:w-full lg:w-full m-0 my-1.5;
+  }
+  /* END SERVICE DETAIL */
+
+  /* SERVICES */
+  .service-offer-card {
+    @apply w-auto m-0;
+    /* w-full py-5 md:w-[calc(50%_-_16px)] lg:w-[calc(25%_-_16px)] text-center aspect-video grid place-items-center bg-white hover:bg-primary hover:text-white m-1; */
+  }
+
+  /* END SERVICES */
 }

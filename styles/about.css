@@ -1,4 +1,4 @@
-.secondary-bg {
+/* .secondary-bg {
   background: black;
   background: linear-gradient(
     rgba(255, 0, 0, 0.121),
@@ -21,4 +21,4 @@
 
 .team-member:hover .name-plate {
   @apply translate-y-[0%];
-}
+} */
